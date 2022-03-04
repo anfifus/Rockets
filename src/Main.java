@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    private static final String FIRST_ROCKET = "32WESSDS";
+    private static final String SECOND_ROCKET = "LDSFJA32";
 
     public static void main(String[] args) {
         try
@@ -32,8 +34,8 @@ public class Main {
 
     private static List<Rocket> createAllRocket() throws Exception{
         List<Rocket> rocketList = new ArrayList<>();
-        Rocket firstRocket = createRocket("32WESSDS");
-        Rocket secondRocket = createRocket("LDSFJA32");
+        Rocket firstRocket = createRocket(FIRST_ROCKET);
+        Rocket secondRocket = createRocket(SECOND_ROCKET);
         rocketList.add(firstRocket);
         rocketList.add(secondRocket);
         return rocketList;
