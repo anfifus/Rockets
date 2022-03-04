@@ -17,7 +17,7 @@ public class Rocket {
     }
 
     private void checkCode(String code) throws Exception{
-        if(code == "" || code.length() != 8) throw new Exception("The format of the code is incorrect");
+        if( code.length() != 8) throw new Exception("The format of the code is incorrect");
     }
 
     public String getCode() {
