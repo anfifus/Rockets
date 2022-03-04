@@ -3,13 +3,14 @@ import java.util.List;
 
 public class Rocket {
     private String code;
-    private int numOfPropellant;
-
-    public Rocket(String code,int numOfPropellant) throws Exception {
-        checkCode(code);
-        checkPropellant(numOfPropellant);
+    private List<Propellant>propellantList = new ArrayList<>();
+    public Rocket(String code) throws Exception {
+        checkProblems(code);
         this.code = code;
-        this.numOfPropellant = numOfPropellant;
+    }
+
+    private void checkProblems(String code) throws Exception {
+        checkCode(code);
     }
 
     private void checkPropellant(int numOfPropellant) throws Exception{
@@ -17,14 +18,26 @@ public class Rocket {
     }
 
     private void checkCode(String code) throws Exception{
-        if(code == "" || code.length() != 8) throw new Exception("The format of the code is incorrect");
+        if(code.length() != 8) throw new Exception("The format of the code is incorrect");
     }
 
     public String getCode() {
         return code;
     }
 
-    public int getNumOfPropellant() {
-        return numOfPropellant;
+    public String getNumOfPropellant() {
+        String resultToShow = "";
+        int counter = 0;
+        for (Propellant currentPropellant:propellantList) {
+            resultToShow += currentPropellant.getPower()+" ";
+        }
+        return resultToShow;
+    }
+
+    public void addPropellant(int[] propellant)throws Exception {
+        for (int currentPropellantPotency:propellant) {
+            propellantList.add(new Propellant(currentPropellantPotency));
+        }
+
     }
 }
