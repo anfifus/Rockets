@@ -18,10 +18,10 @@ public class Main {
     }
 
     private static void createPropellant(List<Rocket> rocketList) throws Exception{
-        int[] propellantListPotency = {10,30,80};
-        int[] propellantListPotency2 = {30,40,50,50,30,10};
-        rocketList.get(0).addPropellant(propellantListPotency);
-        rocketList.get(1).addPropellant(propellantListPotency2);
+        int[] propellantListPower = {10,30,80};
+        int[] propellantListPower2 = {30,40,50,50,30,10};
+        rocketList.get(0).addPropellant(propellantListPower);
+        rocketList.get(1).addPropellant(propellantListPower2);
     }
 
     private static void showRockets(List<Rocket> rocketList) {

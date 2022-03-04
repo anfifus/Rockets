@@ -20,14 +20,14 @@ public class Rocket {
     public String getNumOfPropellant() {
         StringBuilder resultToShow = new StringBuilder();
         for (Propellant currentPropellant:propellantList) {
-            resultToShow.append(currentPropellant.getPower()).append(" ");
+            resultToShow.append(currentPropellant.getMaxPower()).append(" ");
         }
         return resultToShow.toString();
     }
 
     public void addPropellant(int[] propellant)throws Exception {
-        for (int currentPropellantPotency:propellant) {
-            propellantList.add(new Propellant(currentPropellantPotency));
+        for (int currentPropellantPower:propellant) {
+            propellantList.add(new Propellant(currentPropellantPower));
         }
 
     }
