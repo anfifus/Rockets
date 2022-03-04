@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Rocket {
     private final String code;
-    private List<Propellant>propellantList = new ArrayList<>();
+    private final List<Propellant>propellantList = new ArrayList<>();
     public Rocket(String code) throws Exception {
         checkCode(code);
         this.code = code;
