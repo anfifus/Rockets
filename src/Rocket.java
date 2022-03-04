@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rocket {
-    private String code;
+    private final String code;
     private int numOfPropellant;
 
     public Rocket(String code,int numOfPropellant) throws Exception {
