@@ -26,12 +26,12 @@ public class Rocket {
     }
 
     public String getNumOfPropellant() {
-        String resultToShow = "";
+        StringBuilder resultToShow = new StringBuilder();
         int counter = 0;
         for (Propellant currentPropellant:propellantList) {
-            resultToShow += currentPropellant.getPower()+" ";
+            resultToShow.append(currentPropellant.getPower()).append(" ");
         }
-        return resultToShow;
+        return resultToShow.toString();
     }
 
     public void addPropellant(int[] propellant)throws Exception {
