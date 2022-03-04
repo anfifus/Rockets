@@ -41,12 +41,12 @@ public class Rocket {
     }
     public void increasePower(){
         for (Propellant currentPropellant:propellantList) {
-            currentPropellant.setActualPower(10);
+            currentPropellant.updateActualPower(10);
         }
     }
     public void decreasePower(){
         for (Propellant currentPropellant:propellantList) {
-            currentPropellant.setActualPower(-10);
+            currentPropellant.updateActualPower(-10);
         }
     }
 }

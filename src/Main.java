@@ -88,9 +88,16 @@ public class Main {
     private static void createPropellant(List<Rocket> rocketList) throws Exception {
         int[] propellantListPower = {10, 30, 80};
         int[] propellantListPower2 = {30, 40, 50, 50, 30, 10};
-        rocketList.get(0).addPropellant(propellantListPower);
-        rocketList.get(1).addPropellant(propellantListPower2);
+        for (Rocket currentRocket:rocketList ) {
+            if(currentRocket.getCode().equals(FIRST_ROCKET)){
+                currentRocket.addPropellant(propellantListPower);
+            }
+            else if(currentRocket.getCode().equals(SECOND_ROCKET)){
+                currentRocket.addPropellant(propellantListPower2);
+            }
+        }
     }
+
 
     private static void showRockets(List<Rocket> rocketList) {
         for (Rocket currentRocket : rocketList) {
